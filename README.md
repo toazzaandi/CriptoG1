@@ -30,7 +30,7 @@ O sistema permite que os usuários enviem mensagens de forma segura através de 
 
 2. Instale as dependências:
    ```bash
-   pip install -r requirements.txt
+   pip install websockets pycryptodome
    ```
 
 ### Uso
@@ -46,14 +46,6 @@ O sistema permite que os usuários enviem mensagens de forma segura através de 
    ```
 
 3. Siga as instruções no terminal para enviar mensagens.
-
-### Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
-
-### Licença
-
-Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## Alunos
 
