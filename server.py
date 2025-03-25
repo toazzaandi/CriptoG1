@@ -8,12 +8,10 @@ from Crypto.Util.Padding import pad, unpad
 from Crypto.PublicKey import RSA
 from Crypto.Signature import pkcs1_15
 
-# Chave simétrica, HMAC e RSA (em um cenário real, cada cliente teria suas próprias chaves)
 KEY = b"thisisaverysecretkey123"
 IV = b"thisisinitialvectr"
 HMAC_KEY = b"supersecrethmackey"
 
-# Geração de chaves RSA (para um cenário real, as chaves devem ser distribuídas de forma segura)
 private_key = RSA.generate(2048)
 public_key = private_key.publickey()
 
@@ -69,7 +67,7 @@ async def handler(websocket, path):
 async def main():
     async with websockets.serve(handler, "localhost", 8765):
         try:
-            await asyncio.Future()  # Mantém o servidor rodando
+            await asyncio.Future()
         except asyncio.CancelledError:
             print("Servidor encerrado.")
 

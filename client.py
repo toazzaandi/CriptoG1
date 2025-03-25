@@ -8,12 +8,10 @@ from Crypto.Util.Padding import pad, unpad
 from Crypto.PublicKey import RSA
 from Crypto.Signature import pkcs1_15
 
-# Chave simétrica, HMAC e RSA (idealmente, devem ser trocadas de forma segura)
-KEY = b"thisisaverysecretkey12345678"  # 32 bytes para AES-256
+KEY = b"thisisaverysecretkey123"
 IV = b"thisisinitialvectr"
 HMAC_KEY = b"supersecrethmackey"
 
-# Geração de chaves RSA (em um cenário real, cada cliente teria suas próprias chaves)
 private_key = RSA.generate(2048)
 public_key = private_key.publickey()
 
@@ -56,11 +54,11 @@ async def listen_server(websocket):
             print("⚠️ Alerta: Mensagem corrompida, adulterada ou assinatura inválida!")
 
 async def client():
-    async with websockets.connect("ws://localhost:8766") as websocket:
+    async with websockets.connect("ws://localhost:8765") as websocket:
         asyncio.create_task(listen_server(websocket))
         while True:
             message = input("Digite sua mensagem: ")
-            if not message.strip():  # Verifica se a mensagem não está vazia
+            if not message.strip():
                 print("⚠️ Mensagem não pode ser vazia!")
                 continue
             encrypted_message = encrypt_message(message)

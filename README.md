@@ -2,7 +2,58 @@
 
 ## Projeto de Criptografia
 
-- Trabalho G1 na matéria de Criptografia e Segurança tutelada pelo Prof. Rafael Basso Reis
+Este projeto foi desenvolvido como parte do trabalho G1 na matéria de Criptografia e Segurança, tutelada pelo Prof. Rafael Basso Reis. O objetivo é implementar um sistema de comunicação segura utilizando criptografia simétrica e assimétrica.
+
+### Descrição
+
+O sistema permite que os usuários enviem mensagens de forma segura através de um servidor WebSocket. As mensagens são criptografadas usando AES, e a integridade e autenticidade são garantidas através de HMAC e assinaturas digitais com RSA.
+
+### Funcionalidades
+
+- Criptografia de mensagens usando AES (modo CBC).
+- Geração e verificação de HMAC para garantir a integridade das mensagens.
+- Assinatura e verificação de mensagens usando RSA.
+- Comunicação em tempo real através de WebSockets.
+
+### Tecnologias Utilizadas
+
+- Python
+- Bibliotecas: `asyncio`, `websockets`, `pycryptodome`
+
+### Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   cd CriptoG1
+   ```
+
+2. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Uso
+
+1. Inicie o servidor:
+   ```bash
+   python server.py
+   ```
+
+2. Em seguida, inicie o cliente:
+   ```bash
+   python client.py
+   ```
+
+3. Siga as instruções no terminal para enviar mensagens.
+
+### Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+
+### Licença
+
+Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## Alunos
 
