@@ -47,6 +47,6 @@ O sistema permite que os usuários enviem mensagens de forma segura através de 
 
 3. Siga as instruções no terminal para enviar mensagens.
 
-## Alunos
+## Aluno
 
 - Andriano Toazza
